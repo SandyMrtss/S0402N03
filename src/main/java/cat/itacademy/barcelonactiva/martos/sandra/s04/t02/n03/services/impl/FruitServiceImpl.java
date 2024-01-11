@@ -14,22 +14,19 @@ public class FruitServiceImpl implements FruitService {
     private FruitRepository fruitRepository;
 
     @Override
-    public boolean addFruit(Fruit fruit) {
+    public void addFruit(Fruit fruit) {
         fruitRepository.save(fruit);
-        return true;
     }
 
     @Override
-    public boolean updateFruit(Fruit fruit) {
+    public void updateFruit(Fruit fruit) {
         fruitRepository.save(fruit);
-        return true;
     }
 
     @Override
-    public boolean deleteFruit(String id) {
+    public void deleteFruit(String id) {
         Fruit fruit = getOneFruit(id);
         fruitRepository.delete(fruit);
-        return true;
     }
 
     @Override
